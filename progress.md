@@ -108,11 +108,12 @@ Completed:
 - [x] Dashboard route
 - [x] Application layout
 - [x] First HeroUI component
+- [x] Navigation
+- [x] Component extraction
 
 In Progress:
 
 - [ ] Application shell
-- [ ] Navigation
 - [ ] Theme provider
 
 ---
@@ -124,7 +125,6 @@ In Progress:
 - Providers
 - HeroUI Provider
 - Theme
-- Component extraction
 - Folder organization
 
 ---
