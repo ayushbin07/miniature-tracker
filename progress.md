@@ -122,10 +122,10 @@ In Progress:
 
 ## Immediate
 
-- Providers
-- HeroUI Provider
-- Theme
-- Folder organization
+- [ ] Providers
+- [ ] HeroUI Provider
+- [ ] Theme
+- [ ] Folder organization
 
 ---
 
@@ -141,11 +141,11 @@ In Progress:
 
 ## Database
 
-- PostgreSQL
-- Prisma
-- Schema
-- Migrations
-- Relations
+- [ ] PostgreSQL
+- [x] Prisma
+- [x] Schema
+- [ ] Migrations
+- [x] Relations
 
 ---
 
