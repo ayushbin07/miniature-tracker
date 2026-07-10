@@ -6,31 +6,30 @@
 
 # Current Sprint
 
-Sprint 1 — Foundation
+Sprint 2 — Database & Authentication
 
 Goal:
 
-- Establish project architecture
-- Build application skeleton
-- Understand Next.js App Router
-- Begin building instead of following tutorials
+- Set up stable database connections (Prisma Singleton)
+- Integrate PostgreSQL with Supabase
+- Define application data models and relations
+- Implement Authentication flow
 
 Status:
 
-🟡 In Progress
+🟢 Active (In Progress)
 
 ---
 
 # Current Focus
 
-Building the application shell.
+Establishing the backend foundation and moving towards Authentication.
 
 Current priority:
 
-- Next.js architecture
-- HeroUI integration
-- Application layouts
-- Routing
+- Stabilizing Prisma database layer
+- Developing first CRUD operations
+- Preparing for Auth.js integration
 
 Ignore:
 
@@ -100,7 +99,7 @@ These will be addressed later.
 
 # Currently Building
 
-Application Layout
+Backend Foundation
 
 Completed:
 
@@ -110,11 +109,15 @@ Completed:
 - [x] First HeroUI component
 - [x] Navigation
 - [x] Component extraction
+- [x] Application shell
+- [x] Theme provider
+- [x] Prisma configuration (v6 downgrade)
+- [x] Prisma Singleton Client
 
 In Progress:
 
-- [ ] Application shell
-- [ ] Theme provider
+- [ ] Seed Data
+- [ ] First CRUD API Handlers
 
 ---
 
@@ -122,10 +125,10 @@ In Progress:
 
 ## Immediate
 
-- [ ] Providers
-- [ ] HeroUI Provider
-- [ ] Theme
-- [ ] Folder organization
+- [x] Providers
+- [x] HeroUI Provider
+- [x] Theme
+- [x] Folder organization
 
 ---
 
@@ -141,10 +144,11 @@ In Progress:
 
 ## Database
 
-- [ ] PostgreSQL
-- [x] Prisma
+- [x] PostgreSQL
+- [x] Prisma (downgraded to v6)
+- [x] Prisma Singleton Client
 - [x] Schema
-- [ ] Migrations
+- [x] Migrations
 - [x] Relations
 
 ---
@@ -219,7 +223,7 @@ Storage
 
 # Learning Progress
 
-██████░░░░░░░░░░░░░░ 25%
+████████░░░░░░░░░░░░ 35%
 
 This percentage represents conceptual understanding of the planned roadmap, not project completion.
 

@@ -241,6 +241,8 @@ Database configuration no longer lives inside schema.prisma.
 
 Instead it now lives inside prisma.config.ts.
 
+
+
 I also encountered authentication issues while connecting Supabase.
 
 Instead of panicking, I learned to narrow the problem.
