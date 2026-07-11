@@ -1,5 +1,17 @@
+import { error } from "console";
 import { NextResponse } from "next/server";
 import { ZodError } from "zod";
+
+export function notAuthorized(message :string){
+  return Response.json(
+    {
+      message: {message}
+    },
+    {
+      status: 401
+    }
+  )
+}
 
 export function validationError(error: ZodError) {
   return NextResponse.json(
@@ -35,4 +47,12 @@ export function notFound(message: string){
       status: 404
     }
   )
+}
+
+export function conflict(message: string){
+  return NextResponse.json({
+    error: {message}
+  },{
+    status: 409
+  })
 }
