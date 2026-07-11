@@ -433,6 +433,22 @@ Next Session:
 
 ---
 
+# API Route Handlers & Query Optimization
+
+Today I wrote my first dynamic API routes in Next.js (`/api/habits/[id]/logs` and `streak`).
+
+I learned a crucial Next.js App Router convention:
+1. The first argument is ALWAYS the `Request` object.
+2. The second argument is the `context`, containing the `params` Promise.
+
+More importantly, I learned how to optimize database queries. 
+Instead of querying a Habit and then making a completely separate query for its HabitLogs, I used Prisma's `include` property.
+This performs a SQL `JOIN` under the hood, fetching everything in a single, highly optimized trip to the database.
+
+I also learned how to reuse types (like `RouteParams`) to keep my API signatures clean and type-safe.
+
+---
+
 "Today I stopped asking what framework to learn.
 
 I started asking how to build software."

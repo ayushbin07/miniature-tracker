@@ -117,7 +117,7 @@ Completed:
 In Progress:
 
 - [ ] Seed Data
-- [ ] First CRUD API Handlers
+- [x] First CRUD API Handlers
 
 ---
 
@@ -150,6 +150,7 @@ In Progress:
 - [x] Schema
 - [x] Migrations
 - [x] Relations
+- [x] Query Optimization (SQL JOINs via Prisma `include`)
 
 ---
 
@@ -223,7 +224,7 @@ Storage
 
 # Learning Progress
 
-████████░░░░░░░░░░░░ 35%
+██████████░░░░░░░░░░ 40%
 
 This percentage represents conceptual understanding of the planned roadmap, not project completion.
 

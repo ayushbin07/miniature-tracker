@@ -25,3 +25,14 @@ export function serverError(error: unknown) {
     },
   );
 }
+
+export function notFound(message: string){
+  return NextResponse.json(
+    {
+      message: {message}
+    },
+    {
+      status: 404
+    }
+  )
+}
