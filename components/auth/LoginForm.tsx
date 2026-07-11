@@ -2,7 +2,15 @@
 
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
-import { Button, Form, Input, InputGroup, Label, TextField, Link } from "@heroui/react";
+import {
+  Button,
+  Form,
+  Input,
+  InputGroup,
+  Label,
+  TextField,
+  Link,
+} from "@heroui/react";
 
 export default function LoginForm() {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,7 +31,10 @@ export default function LoginForm() {
       <TextField name="password" isRequired>
         <Label>Password</Label>
         <InputGroup variant="secondary">
-          <InputGroup.Input placeholder="Enter your password" type={isVisible ? "text" : "password"} />
+          <InputGroup.Input
+            placeholder="Enter your password"
+            type={isVisible ? "text" : "password"}
+          />
           <InputGroup.Suffix className="pr-0">
             <Button
               isIconOnly
@@ -32,7 +43,11 @@ export default function LoginForm() {
               variant="ghost"
               onPress={() => setIsVisible(!isVisible)}
             >
-              {isVisible ? <Eye className="size-4" /> : <EyeOff className="size-4" />}
+              {isVisible ? (
+                <Eye className="size-4" />
+              ) : (
+                <EyeOff className="size-4" />
+              )}
             </Button>
           </InputGroup.Suffix>
         </InputGroup>
@@ -41,9 +56,13 @@ export default function LoginForm() {
       <Button className="w-full bg-accent" type="submit">
         Sign In
       </Button>
+
+
+
       <Link className="self-center text-sm" href="#">
         Forgot password?
       </Link>
+
       <span className="text-xs text-muted-foreground self-center">
         Made with ❤️ by Ayush
       </span>

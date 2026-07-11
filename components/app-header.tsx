@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 
 export function AppHeader() {
   return (
-    <header className="flex h-14 shrink-0 items-center justify-between border-b bg-[#000000] px-4 text-white">
+    <header className="flex h-14 shrink-0 items-center justify-between border-b bg-background px-4 text-white">
       {/* Left section */}
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-2">
