@@ -3,7 +3,6 @@
 import {
   Sidebar,
   SidebarContent,
-  SidebarRail,
 } from '@/components/animate-ui/components/radix/sidebar';
 import { NavMain }   from '@/components/sidebar/NavMain';
 import { NavBottom } from '@/components/sidebar/NavBottom';
@@ -34,8 +33,6 @@ export function AppSidebar({
       {/* ── User section ──────────────────────────────────────────────── */}
       <NavUser user={user} />
 
-      {/* ── Rail (drag-to-resize handle) ──────────────────────────────── */}
-      <SidebarRail />
     </Sidebar>
   );
 }

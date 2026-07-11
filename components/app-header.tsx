@@ -1,19 +1,19 @@
 import React from "react";
-import { 
-  Search, 
-  ChevronDown, 
-  Star, 
+import {
+  Search,
+  ChevronDown,
+  Star,
   Languages,
   Sun,
   Moon,
   Monitor,
-  Hexagon
+  Hexagon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function AppHeader() {
   return (
-    <header className="flex h-14 shrink-0 items-center justify-between border-b bg-background px-4 text-white">
+    <header className="flex h-14 shrink-0 items-center justify-between bg-background px-4 text-white">
       {/* Left section */}
       <div className="flex items-center gap-4">
         <div className="flex items-center gap-2">
@@ -34,7 +34,9 @@ export function AppHeader() {
             <span>Search</span>
           </div>
           <div className="flex items-center gap-1 text-xs">
-            <kbd className="rounded bg-white/10 px-1.5 py-0.5 font-sans">Ctrl</kbd>
+            <kbd className="rounded bg-white/10 px-1.5 py-0.5 font-sans">
+              Ctrl
+            </kbd>
             <kbd className="rounded bg-white/10 px-1.5 py-0.5 font-sans">K</kbd>
           </div>
         </button>
@@ -42,26 +44,48 @@ export function AppHeader() {
 
       {/* Right section */}
       <div className="flex items-center gap-2">
-        <Button variant="ghost" className="h-9 rounded-full bg-white/5 px-4 text-white/70 hover:bg-white/10 hover:text-white text-sm">
-          Theme
-        </Button>
-        <Button variant="ghost" className="h-9 rounded-full bg-white/5 px-4 text-white/70 hover:bg-white/10 hover:text-white text-sm gap-2">
+        <Button
+          variant="ghost"
+          className="h-9 rounded-full bg-white/5 px-4 text-white/70 hover:bg-white/10 hover:text-white text-sm gap-2"
+        >
           <Star className="size-4 fill-white/70" />
-          29.9k
+          Give a star at Github?
         </Button>
-        <Button variant="ghost" size="icon" className="size-9 rounded-full bg-white/5 text-white/70 hover:bg-white/10 hover:text-white">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="size-9 rounded-full bg-white/5 text-white/70 hover:bg-white/10 hover:text-white"
+        >
           <Languages className="size-4" />
         </Button>
-        
+
         {/* Theme Toggles */}
+        <Button
+          variant="ghost"
+          className="h-9 rounded-full bg-white/5 px-4 text-white/70 hover:bg-white/10 hover:text-white text-sm"
+        >
+          Theme
+        </Button>
         <div className="flex items-center rounded-full bg-white/5 p-0.5">
-          <Button variant="ghost" size="icon" className="size-8 rounded-full text-white/70 hover:bg-white/10 hover:text-white">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="size-8 rounded-full text-white/70 hover:bg-white/10 hover:text-white"
+          >
             <Sun className="size-4" />
           </Button>
-          <Button variant="ghost" size="icon" className="size-8 rounded-full bg-white/20 text-white shadow-sm hover:bg-white/20 hover:text-white">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="size-8 rounded-full bg-white/20 text-white shadow-sm hover:bg-white/20 hover:text-white"
+          >
             <Moon className="size-4" />
           </Button>
-          <Button variant="ghost" size="icon" className="size-8 rounded-full text-white/70 hover:bg-white/10 hover:text-white">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="size-8 rounded-full text-white/70 hover:bg-white/10 hover:text-white"
+          >
             <Monitor className="size-4" />
           </Button>
         </div>
