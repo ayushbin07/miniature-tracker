@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
+import { loginSchema } from "@/lib/validators/auth";
 import {
   Button,
   Form,
@@ -10,25 +11,79 @@ import {
   Label,
   TextField,
   Link,
+  FieldError,
 } from "@heroui/react";
+import { signIn } from "next-auth/react";
+import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 export default function LoginForm() {
   const [isVisible, setIsVisible] = useState(false);
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const result = loginSchema.safeParse(formData);
+    
+    if (!result.success) {
+      const newErrors: Record<string, string> = {};
+      result.error.issues.forEach((issue) => {
+        newErrors[issue.path[0] as string] = issue.message;
+      });
+      setErrors(newErrors);
+    } else {
+      setErrors({});
+      setIsLoading(true);
 
-    // Connect Auth.js later
+      try {
+        const response = await signIn("credentials", {
+          email: formData.email,
+          password: formData.password,
+          redirect: false,
+        });
+
+        if (response?.error) {
+          toast.error("Invalid credentials.");
+        } else {
+          toast.success("Signed in successfully!");
+          router.push("/dashboard");
+        }
+      } catch (error) {
+        toast.error("Something went wrong.");
+      } finally {
+        setIsLoading(false);
+      }
+    }
   }
 
   return (
     <Form className="flex flex-col gap-4" onSubmit={onSubmit}>
-      <TextField name="email" type="email" isRequired>
+      <TextField
+        name="email"
+        type="email"
+        isRequired
+        isInvalid={!!errors.email}
+        onChange={(val) => setFormData({ ...formData, email: val })}
+        value={formData.email}
+      >
         <Label>Email</Label>
         <Input variant="secondary" placeholder="you@example.com" />
+        {errors.email && <FieldError>{errors.email}</FieldError>}
       </TextField>
 
-      <TextField name="password" isRequired>
+      <TextField
+        name="password"
+        isRequired
+        isInvalid={!!errors.password}
+        onChange={(val) => setFormData({ ...formData, password: val })}
+        value={formData.password}
+      >
         <Label>Password</Label>
         <InputGroup variant="secondary">
           <InputGroup.Input
@@ -51,9 +106,15 @@ export default function LoginForm() {
             </Button>
           </InputGroup.Suffix>
         </InputGroup>
+        {errors.password && <FieldError>{errors.password}</FieldError>}
       </TextField>
 
-      <Button className="w-full bg-accent" type="submit">
+      <Button
+        className="w-full bg-accent"
+        type="submit"
+        isPending={isLoading}
+        isDisabled={isLoading}
+      >
         Sign In
       </Button>
 
