@@ -110,7 +110,7 @@ export default function LoginForm() {
       </TextField>
 
       <Button
-        className="w-full bg-accent"
+        className="w-full bg-primary text-primary-foreground"
         type="submit"
         isPending={isLoading}
         isDisabled={isLoading}

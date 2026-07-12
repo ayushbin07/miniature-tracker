@@ -162,7 +162,7 @@ export default function RegisterForm() {
                   {errors.username && <FieldError>{errors.username}</FieldError>}
                 </TextField>
                 <Button
-                  className="w-full bg-accent"
+                  className="w-full bg-primary text-primary-foreground"
                   onPress={handleNext}
                 >
                   Next
@@ -247,7 +247,7 @@ export default function RegisterForm() {
                 </div>
 
                 <Button
-                  className="w-full bg-accent"
+                  className="w-full bg-primary text-primary-foreground"
                   type="button"
                   onPress={onSubmit}
                   isPending={isLoading}
