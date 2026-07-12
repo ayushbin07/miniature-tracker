@@ -59,13 +59,21 @@ export default function LoginForm() {
 
 
 
-      <Link className="self-center text-sm" href="#">
-        Forgot password?
-      </Link>
+      <div className="flex flex-col items-center gap-2 mt-2">
+        <div className="flex items-center gap-3">
+          <Link className="text-sm" href="#">
+            Forgot password?
+          </Link>
+          <div className="h-3 w-px bg-border/50" />
+          <Link className="text-sm text-primary font-medium" href="/register">
+            Create account
+          </Link>
+        </div>
 
-      <span className="text-xs text-muted-foreground self-center">
-        Made with ❤️ by Ayush
-      </span>
+        <span className="text-xs text-muted-foreground">
+          Made with ❤️ by Ayush
+        </span>
+      </div>
     </Form>
   );
 }

@@ -12,6 +12,7 @@
     "@auth/prisma-adapter": "^2.11.2",
     "@base-ui/react": "^1.6.0",
     "@floating-ui/react": "^0.27.20",
+    "@headlessui/react": "^2.2.10",
     "@heroui/react": "^3.2.2",
     "@heroui/styles": "^3.2.2",
     "@prisma/client": "^6.19.3",

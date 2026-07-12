@@ -1,7 +1,5 @@
-import React from "react";
 import {
   Search,
-  ChevronDown,
   Star,
   Languages,
   Sun,
@@ -22,7 +20,6 @@ export function AppHeader() {
         </div>
         <button className="flex items-center gap-1 rounded-md px-2 py-1 text-sm font-medium text-white/70 hover:bg-white/10 hover:text-white">
           v2.1.0-beta.1
-          <ChevronDown className="size-4" />
         </button>
       </div>
 
