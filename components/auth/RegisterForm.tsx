@@ -84,7 +84,7 @@ export default function RegisterForm() {
                         isIconOnly
                         className="rounded-l-none text-default-400"
                         size="sm"
-                        variant="light"
+                        variant="ghost"
                         onPress={() => setIsCreateVisible(!isCreateVisible)}
                       >
                         {isCreateVisible ? (
@@ -108,7 +108,7 @@ export default function RegisterForm() {
                         isIconOnly
                         className="rounded-l-none text-default-400"
                         size="sm"
-                        variant="light"
+                        variant="ghost"
                         onPress={() => setIsConfirmVisible(!isConfirmVisible)}
                       >
                         {isConfirmVisible ? (
