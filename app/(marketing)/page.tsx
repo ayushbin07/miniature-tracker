@@ -1,11 +1,5 @@
-import React from 'react'
+import { redirect } from "next/navigation";
 
-const LandingPage = () => {
-  return (
-    <div>LandingPage
-    
-    </div>
-  )
+export default function LandingPage() {
+  redirect("/dashboard");
 }
-
-export default LandingPage
