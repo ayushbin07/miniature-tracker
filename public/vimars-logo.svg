@@ -1,0 +1,9 @@
+<svg width="560" height="160" viewBox="0 0 560 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="160" rx="24" fill="#0B1020"/>
+  <g transform="translate(36 28)">
+    <path d="M52 4L90 26V70L52 92L14 70V26L52 4Z" fill="#5B7CFA"/>
+    <path d="M52 20L76 34V62L52 76L28 62V34L52 20Z" fill="#A9B8FF"/>
+  </g>
+  <text x="154" y="76" fill="#FFFFFF" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="46" font-weight="700" letter-spacing="-0.8">Vimars</text>
+  <text x="154" y="110" fill="#95A3C4" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="18" font-weight="500">Track habits. Execute daily. Improve consistently.</text>
+</svg>
