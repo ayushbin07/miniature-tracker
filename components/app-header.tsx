@@ -2,13 +2,10 @@ import {
   Search,
   Star,
   Languages,
-  Sun,
-  Moon,
-  Monitor,
   Hexagon,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import { ThemeToggle } from "@/components/theme-toggle";
 export function AppHeader() {
   return (
     <header className="flex h-14 shrink-0 items-center justify-between bg-background px-4 text-foreground border-b border-border">
@@ -63,29 +60,7 @@ export function AppHeader() {
         >
           Theme
         </Button>
-        <div className="flex items-center rounded-full bg-muted p-0.5 border border-border">
-          <Button
-            variant="ghost"
-            size="icon"
-            className="size-8 rounded-full text-muted-foreground hover:bg-accent hover:text-accent-foreground"
-          >
-            <Sun className="size-4" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="size-8 rounded-full bg-background text-foreground shadow-sm"
-          >
-            <Moon className="size-4" />
-          </Button>
-          <Button
-            variant="ghost"
-            size="icon"
-            className="size-8 rounded-full text-muted-foreground hover:bg-accent hover:text-accent-foreground"
-          >
-            <Monitor className="size-4" />
-          </Button>
-        </div>
+        <ThemeToggle />
       </div>
     </header>
   );
