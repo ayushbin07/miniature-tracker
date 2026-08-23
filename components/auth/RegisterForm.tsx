@@ -110,7 +110,7 @@ export default function RegisterForm() {
   };
 
   return (
-    <div className="flex w-full flex-col">
+    <Form className="flex w-full flex-col" validationBehavior="native" onSubmit={(e) => { e.preventDefault(); }}>
       <Tabs value={activeTab} onValueChange={setActiveTab}>
         <TabsList className="w-full">
           <TabsTrigger value="account">Account</TabsTrigger>
@@ -271,6 +271,6 @@ export default function RegisterForm() {
           Made with ❤️ by Ayush
         </span>
       </div>
-    </div>
+    </Form>
   );
 }

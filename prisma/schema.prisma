@@ -3,30 +3,27 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 model User {
-  id              String        @id @default(cuid())
-  name            String
-  email           String        @unique
-  username        String        @unique
-
-  hashedPassword  String
-
-  avatarSeed      String
-  avatarType      AvatarType    @default(GENERATED)
-  avatarUrl       String?
-
-  categories      Category[]
-  habits          Habit[]
-  notes           Note[]
-  tasks           Task[]
-  settings        UserSettings?
-
-  createdAt       DateTime      @default(now())
-  updatedAt       DateTime      @updatedAt
+  id             String        @id @default(cuid())
+  name           String
+  email          String        @unique
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+  avatarSeed     String
+  avatarType     AvatarType    @default(GENERATED)
+  avatarUrl      String?
+  username       String        @unique
+  hashedPassword String
+  categories     Category[]
+  habits         Habit[]
+  notes          Note[]
+  tasks          Task[]
+  settings       UserSettings?
 }
 
 model Category {

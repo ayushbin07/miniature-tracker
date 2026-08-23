@@ -13,26 +13,22 @@ export async function POST(request: Request) {
   }
   const { name, username, email, password } = body;
 
-  const existingUser = await prisma.user.findUnique({
+  const existingUser = await prisma.user.findFirst({
     where: {
-      email,
+      OR: [
+        { email },
+        { username },
+      ],
     },
   });
-  const existingUsername = await prisma.user.findUnique({
-  where: {
-    username,
-  },
-});
-
-if (existingUsername) {
-  return conflict("Username already exists.");
-}
 
   if (existingUser) {
-    return conflict("Email already exists.");
-  }
-  if(existingUsername){
-    return conflict("Username already exists.")
+    if (existingUser.email === email) {
+      return conflict("Email already exists.");
+    }
+    if (existingUser.username === username) {
+      return conflict("Username already exists.");
+    }
   }
 
   const hashedPassword = await bcrypt.hash(password, 10);
@@ -62,3 +58,4 @@ if (existingUsername) {
     },
   );
 }
+ 
